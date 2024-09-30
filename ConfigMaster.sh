@@ -104,7 +104,7 @@ else
   if [ "$protocol" = "1" ]; then
     clear
     banner
-    python3 Multiple_telnet.py
+    python3 Multiple_Telnet.py
   elif [ "$protocol" = "2" ]; then
     clear
     banner
