@@ -94,20 +94,20 @@ if [ "$choice" = "1" ]; then
   if [ "$protocol" = "1" ]; then
     clear
     banner
-    python3 Single_Telnet.py
+    python3 modules/Single_Telnet.py
   elif [ "$protocol" = "2" ]; then
     clear
     banner
-    python3 Single_SSH.py
+    python3 modules/Single_SSH.py
   fi
 else
   if [ "$protocol" = "1" ]; then
     clear
     banner
-    python3 Multiple_telnet.py
+    python3 modules/Multiple_telnet.py
   elif [ "$protocol" = "2" ]; then
     clear
     banner
-    python3 Multiple_SSH.py
+    python3 modules/Multiple_SSH.py
   fi
 fi
