@@ -27,8 +27,8 @@ echo -e "${WHITE}=============================================================="
 echo -e "${RED}${BOLD}               CONFIGMASTER Network Automation Tool             "
 echo -e "${WHITE}=============================================================="
 echo -e " "
-echo -e "${WHITE}#       *********${RED}${BOLD} Author: SDK-NETWORKS${RESET}${WHITE}*********                #"
-echo -e "${WHITE}#       ******${RED}${BOLD} Date: $current_date_time${RESET}${WHITE} ******                #"
+echo -e "${WHITE}#       *********${RED}${BOLD} Author: SDK-NETWORKS${RESET}${WHITE}*********              #"
+echo -e "${WHITE}#       ******${RED}${BOLD} Date: $current_date_time${RESET}${WHITE} ******              #"
 echo -e "${WHITE}=============================================================="
 echo -e " "
 }
@@ -41,7 +41,7 @@ while true; do
   echo -e "${WHITE}"
   
   echo "Device Configuration Options:"
-  echo "1. Single Device Configuration"
+  echo "1. Single Device"
   echo "2. Multiple Devices"
   echo "3. Exit from script"
 
@@ -94,20 +94,21 @@ if [ "$choice" = "1" ]; then
   if [ "$protocol" = "1" ]; then
     clear
     banner
-    python3 modules/Single_Telnet.py
+    python3 Single_Telnet.py
   elif [ "$protocol" = "2" ]; then
     clear
     banner
-    python3 modules/Single_SSH.py
+    python3 Single_SSH.py
   fi
 else
   if [ "$protocol" = "1" ]; then
     clear
     banner
-    python3 modules/Multiple_Telnet.py
+    python3 Multiple_telnet.py
   elif [ "$protocol" = "2" ]; then
     clear
     banner
-    python3 modules/Multiple_SSH.py
+    python3 Multiple_SSH.py
   fi
 fi
+echo -e "${RESET}"
